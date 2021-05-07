@@ -8,10 +8,20 @@ h1{
     font-family: 'Segoe UI';
     font-weight: 600;
 }
-img{
-    max-width: 200px;
-    min-width: 200px;
+.data-box{
+    margin-top: 25px;
 }
+.datos{
+    
+    width: 30px !important;
+    height: 30px;
+}
+
+#pokeimg{
+    width: 200px;
+    margin: 35px 0px 0px 20px;
+    
+}    
 
 ion-card{
     width: 500px;
@@ -20,6 +30,9 @@ ion-card{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+ion-card-header{
+    margin-top: 35px;
+}
 ion-card-title{
     text-align: center;
     font-size: 24px;
@@ -51,4 +64,13 @@ ion-card-subtitle{
     font-size: 18px;
     font-weight: 600;
     background-color: #FFD600;
+}
+
+span{
+    margin-left: 10px;
+    
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+    color:#000;
 }
