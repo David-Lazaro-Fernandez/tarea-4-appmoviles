@@ -1,0 +1,54 @@
+body{
+    background-color: #FFFF;
+}
+h1{
+    color:black;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+}
+img{
+    max-width: 200px;
+    min-width: 200px;
+}
+
+ion-card{
+    width: 500px;
+    height: 300px;
+    background-color: #FFFF;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+ion-card-title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+ion-card-subtitle{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+
+#info{
+    background-color: #FFFF;
+    height: 300px;
+}
+
+#photo{
+    background-color: #FFD600;
+    height: 300px;
+}
+
+#type{
+    color: #FFFF;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #FFD600;
+}
