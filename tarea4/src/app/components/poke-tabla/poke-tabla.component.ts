@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subscriber } from 'rxjs';
 import {PoketablaService} from './poke-tabla.service';
+
 @Component({
   selector: 'poke-tabla',
   templateUrl: './poke-tabla.component.html',
   styleUrls: ['./poke-tabla.component.scss'],
 })
+
+
 export class PokeTablaComponent implements OnInit {
   pokeList = [];
   constructor(

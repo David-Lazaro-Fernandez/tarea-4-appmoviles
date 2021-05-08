@@ -18,9 +18,43 @@
 
             <ion-card-content>
               <!--Tipo de pokemon-->
-              <ion-row>
+              <ion-row [ngSwitch]="pokemon.type">
                 <ion-col size="2"></ion-col>
-                <ion-col size="8" id="type">{{pokemon.type}}</ion-col>
+                
+                  <ion-col *ngSwitchCase="'fire'" size="8" id="type" style="background-color:#F6A368" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'water'" size="8" id="type" style="background-color:#6FBAFF" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'bug'" size="8" id="type" style="background-color:#C0DE8E" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'dark'" size="8" id="type" style="background-color:#373737" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'dragon'" size="8" id="type" style="background-color:#692BCF" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'electric'" size="8" id="type" style="background-color:#FFD600" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'fairy'" size="8" id="type" style="background-color:#FFAFF7" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'fighting'" size="8" id="type" style="background-color:#FF5656" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'flying'" size="8" id="type" style="background-color:#AED1D9" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'ghost'" size="8" id="type" style="background-color:#807CB1" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'grass'" size="8" id="type" style="background-color:#46D27E" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'ground'" size="8" id="type" style="background-color:#C88555" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'ice'" size="8" id="type" style="background-color:#89E3FF" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'normal'" size="8" id="type" style="background-color:#A8A090" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'poison'" size="8" id="type" style="background-color:#BF46D2" >{{pokemon.type}}
+                  </ion-col>
+                  <ion-col *ngSwitchCase="'psychic'" size="8" id="type" style="background-color:#FC62FF" >{{pokemon.type}}
+                  </ion-col>
+                  
+               
                 <ion-col size="2"></ion-col>
               </ion-row>
               <!--Probabilidad de captura y nivel al que evoluciona-->
@@ -30,7 +64,7 @@
                   <span>16%</span>
                 </ion-col>
                 <ion-col size="6">
-                  <img class="datos" src="../../../assets/img/levelup y.png" alt="Evolution level">                  
+                  <img class="datos" src="../../../assets/img/levelup y.png" alt="Evolution level">
                   <span>level 16</span>
                 </ion-col>
               </ion-row>
@@ -47,7 +81,7 @@
               </ion-row>
             </ion-card-content>
           </ion-col>
-          
+
           <!--Sección de la foto del pokemon-->
           <ion-col id="photo">
             <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
