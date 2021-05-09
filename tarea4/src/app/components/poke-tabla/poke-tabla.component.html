@@ -2,7 +2,7 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <h1>PokeAPI</h1>
+        <h1><img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"></h1>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -20,7 +20,7 @@
               <!--Tipo de pokemon-->
               <ion-row [ngSwitch]="pokemon.type">
                 <ion-col size="2"></ion-col>
-                
+
                   <ion-col *ngSwitchCase="'fire'" size="8" id="type" style="background-color:#F6A368" >{{pokemon.type}}
                   </ion-col>
                   <ion-col *ngSwitchCase="'water'" size="8" id="type" style="background-color:#6FBAFF" >{{pokemon.type}}
@@ -53,8 +53,8 @@
                   </ion-col>
                   <ion-col *ngSwitchCase="'psychic'" size="8" id="type" style="background-color:#FC62FF" >{{pokemon.type}}
                   </ion-col>
-                  
-               
+
+
                 <ion-col size="2"></ion-col>
               </ion-row>
               <!--Probabilidad de captura y nivel al que evoluciona-->
