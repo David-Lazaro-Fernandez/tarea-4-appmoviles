@@ -83,9 +83,56 @@
           </ion-col>
 
           <!--Sección de la foto del pokemon-->
-          <ion-col id="photo">
+          <ion-row [ngSwitch]=pokemon.type>
+          <ion-col id="photo" *ngSwitchCase="'fire'" style="background-color:#F6A368">
             <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
           </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'water'"style="background-color:#6FBAFF">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'bug'" style="background-color:#C0DE8E">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'dark'" style="background-color:#373737">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'dragon'" style="background-color:#692BCF">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'electric'" style="background-color:#FFD600">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'fairy'" style="background-color:#FFAFF7">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'fighting'" style="background-color:#FF5656">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'flying'" style="background-color:#AED1D9">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'ghost'" style="background-color:#807CB1">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'grass'" style="background-color:#46D27E">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'ground'" style="background-color:#C88555">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'ice'" style="background-color:#89E3FF">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'normal'" style="background-color:#A8A090">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'poison'" style="background-color:#BF46D2">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          <ion-col id="photo" *ngSwitchCase="'psychic'" style="background-color:#FC62FF">
+            <img id="pokeimg" src={{pokemon.image}} alt="A pokemon image">
+          </ion-col>
+          </ion-row>
         </ion-row>
       </ion-card>
     </ion-row>
