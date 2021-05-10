@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Subscriber } from 'rxjs';
 import { PoketablaService } from './poke-tabla.service';
@@ -10,19 +11,37 @@ import { PoketablaService } from './poke-tabla.service';
 })
 export class PokeTablaComponent implements OnInit {
   pokeList = [];
+  limit: number = 0;
   constructor(
     private http: HttpClient,
     private pokeservice: PoketablaService
   ) {}
 
   ngOnInit() {
-    this.getPokemones();
+    this.getPokemones(3);
   }
 
-  getPokemones() {
-    let pokeData;
+  showPoke() {
+    console.log(this.limit);
+    if (this.limit == null) {
+      this.getPokemones(3);
+    }
+    else if (this.limit <= 0) {
+      this.getPokemones(0);
+    }
+    else if (this.limit >= 898) {
+      this.getPokemones(898);
+    }
+    else {
+      this.getPokemones(this.limit);
+    }
+  }
 
-    for (let i = 1; i < 100; i++) {
+  getPokemones(stop: number) {
+    let pokeData;
+    this.pokeList.splice(0,this.pokeList.length);
+
+    for (let i = 1; i <= stop; i++) {
       this.pokeservice.getPokemones(i).subscribe(
         (res) => {
           let urlImagen = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/';
